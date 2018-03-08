@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rdsw9r566jxer973wqi2.mysql.rds.aliyuncs.com:3306/nuanyou20?useUnicode=true&characterEncoding=UTF-8
+    username: dev
+    password: 1qaz2wsxE
+    test-on-borrow: true
+    validation-query: select 1
+
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  http:
+    multipart:
+      max-file-size: 9Mb
+      max-request-size: 20Mb
+
+server:
+  port: 8100
+  tomcat:
+    accesslog:
+      enabled: true
+      directory: /var/log/accesslog/
+
+s3:
+  bucketName: cf-templates-m66jhmg23fv9-us-west-2
+  domain: https://s3-us-west-2.amazonaws.com
+  region: us-west-2
+
+swagger:
+  domain: http://127.0.0.1:8100
+
+thymeleafTemplate:
+  cache:  false

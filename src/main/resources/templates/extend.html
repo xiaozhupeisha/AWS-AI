@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/xcConfirm.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/jquery.loadmask.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/select2/select2.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/jquery.datetimepicker.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/jsonFormater.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/common/common.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/index.css}"/>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../">Amazon Rekognition</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Smart photo library</h1>
+        <p>基于Amazon Rekognition的图片文字识别案例.</p>
+        <form class="navbar-form img-form text-img-form" enctype="multipart/form-data" method="post"
+              action="/graphic/_text">
+            <input type="file" name="textFile" class="textFile"/>
+            <button type="button" class="btn btn-lg btn-success upload-text-img">
+                <span class="glyphicon glyphicon-upload"></span>
+                上传
+            </button>
+            <div class="alert alert-success text-result" role="alert">
+                <div th:if="${textDetections} != null">
+                    <div class="text-json" th:text="${textDetections}"></div>
+                </div>
+                <span th:if="${textDetections} == null">
+                    Amazon Rekognition 提供了用于检测图像中的标签和人脸的非存储 API 操作。
+                标签是基于其内容在图像中找到的对象、场景或概念。
+                例如，热带海滩上的人物照片可能包含人物、水、沙、棕榈树和泳装 (对象)、海滩 (场景) 以及户外 (概念) 等标签。
+                </span>
+            </div>
+        </form>
+        <p>基于Amazon Rekognition的人脸识别案例.</p>
+        <form class="navbar-form img-form face-img-form" enctype="multipart/form-data" method="post"
+              action="/graphic/_face">
+            <input type="file" name="faceFile" class="faceFile"/>
+            <button type="button" class="btn btn-lg btn-info upload-face-img">
+                <span class="glyphicon glyphicon-upload"></span>
+                上传
+            </button>
+            <div class="alert alert-info face-result" role="alert">
+                <div th:if="${faceDetails} != null">
+                    <div class="face-json" th:text="${faceDetails}"></div>
+                </div>
+                <span th:if="${faceDetails} == null">
+                    Amazon Rekognition 提供了用于检测图像中的标签和人脸的非存储 API 操作。
+                标签是基于其内容在图像中找到的对象、场景或概念。
+                例如，热带海滩上的人物照片可能包含人物、水、沙、棕榈树和泳装 (对象)、海滩 (场景) 以及户外 (概念) 等标签。
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/js/jquery/1.12.4/jquery-1.12.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.loadmask.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jqPaginator.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.tmpl.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/plugin/jsonFormater.js}"></script>
+<script type="text/javascript" th:src="@{/js/plugin/select2/select2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.datetimepicker.full.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/plugin/xcConfirm.js}"></script>
+<script type="text/javascript" th:src="@{/js/common/common.js}"></script>
+<script type="text/javascript" th:src="@{/js/index.js}"></script>
+</body>
+</html>

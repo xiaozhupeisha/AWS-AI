@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/xcConfirm.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/jquery.loadmask.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/select2/select2.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/plugin/jquery.datetimepicker.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/common/common.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/index.css}"/>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="javascript:;">Amazon Rekognition</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Smart photo library</h1>
+        <p>基于Amazon Rekognition的智能图片库案例.</p>
+        <form class="navbar-form img-form" enctype="multipart/form-data" method="post" action="graphic/_label">
+            <div class="form-group">
+                <input placeholder="请输入查询关键字" name="key" th:value="${key}" class="form-control img-search-input" />
+            </div>
+            <button type="button" class="btn btn-lg btn-info search-img">
+                <span class="glyphicon glyphicon-search"></span>查询
+            </button>
+            <input type="file" name="file" class="file"/>
+            <button type="button" class="btn btn-lg btn-success upload-img">
+                <span class="glyphicon glyphicon-upload"></span>上传
+            </button>
+            <button type="button" class="btn btn-lg btn-primary more-function">
+                <span class="glyphicon glyphicon-fast-forward"></span>更多功能
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="container theme-showcase">
+    <!-- Example row of columns -->
+    <div class="row img-list">
+        <div class="col-md-4 img-box" th:each="image : ${list}">
+            <div class="img-div"><img th:src="${image.redirectLocation}" class="img-thumbnail img-labels" /></div>
+            <div><span th:each="label : ${image.labels}" th:class="${label.iconClass}" th:text="${label.name}"></span></div>
+        </div>
+    </div>
+
+    <hr/>
+
+    <footer style="text-align: center">
+        <p>Copyright © 2016, 暖游（上海）国际旅行社有限公司  沪ICP备15007941号-1</p>
+    </footer>
+</div> <!-- /container -->
+
+<script type="text/javascript" th:src="@{/js/jquery/1.12.4/jquery-1.12.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.loadmask.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jqPaginator.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.tmpl.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/plugin/select2/select2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.datetimepicker.full.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/plugin/xcConfirm.js}"></script>
+<script type="text/javascript" th:src="@{/js/common/common.js}"></script>
+<script type="text/javascript" th:src="@{/js/index.js}"></script>
+</body>
+</html>

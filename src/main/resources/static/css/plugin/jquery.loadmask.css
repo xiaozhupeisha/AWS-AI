@@ -1,0 +1,42 @@
+.loadmask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	-moz-opacity: 0.1;
+    opacity: .2;
+    filter: alpha(opacity=20);
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	zoom: 1;
+	
+	z-index: 1000001000;
+}
+
+.loadmask-msg {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	padding: 2px;
+	
+	z-index: 1000001001;
+}
+
+.loadmask-msg div {
+	line-height: 16px;
+	color: #222;
+	font: normal 11px tahoma, arial, helvetica, sans-serif;
+	cursor: wait;
+}
+
+.masked {
+	/* overflow: hidden !important; */
+}
+
+.masked-relative {
+	position: relative !important;
+}
+
+.masked-hidden {
+	visibility: hidden !important;
+}

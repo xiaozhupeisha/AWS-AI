@@ -1,0 +1,150 @@
+.row-table-list {
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+}
+
+.table .tr-sum {
+    background: #d7d7d7;
+}
+
+.img-form {
+    padding: 10px 0px !important;
+}
+
+.img-form .alert {
+    margin-top: 20px;
+}
+
+.img-list img {
+    width: 300px !important;
+}
+
+.img-list .img-box {
+    width: 300px;
+}
+
+.jumbotron {
+    padding-bottom: 30px !important;
+}
+
+.img-list .img-box .img-div {
+    background-size: cover;
+    height: 300px;
+    width: 300px
+}
+
+.img-list .img-labels {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.img-list .col-md-4 {
+    height: 300px;
+    margin-right: 85px;
+    margin-bottom: 60px;
+}
+
+.img-list .col-md-4 span {
+    cursor: pointer;
+    margin-right: 3px;
+    display: inline-block;
+}
+
+.img-form .file {
+    display: none;
+}
+
+.text-img-form .textFile {
+    display: none;
+}
+
+.face-img-form .faceFile {
+    display: none;
+}
+
+.img-search-input {
+    width: 400px !important;
+    height: 43px !important;
+}
+
+.img-form button {
+    line-height: 1.74 !important;
+}
+
+.table-list-content .settle-status {
+    float: left;
+    margin-top: 3px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.table-list-title {
+    display: none;
+}
+
+.table-list-content td {
+    height: 45px !important;
+}
+
+.table-list-content .tr-sum td {
+    height: 30px !important;
+}
+
+.init-table {
+    height: 200px;
+    text-align: center;
+}
+
+.init-table p {
+    cursor: pointer;
+    font-size: 22px;
+    color: #A1A1A1;
+    margin-top: 80px;
+}
+
+.table td, th {
+    border-left: 0px solid #ddd !important;
+    border-right: 0px solid #ddd !important;
+}
+
+.table .expand-tr-class td {
+    border: 0px solid #ddd !important;
+}
+
+.table .expand-tr-class {
+    display: none;
+}
+
+.table .expand-tr-class label {
+    font-size: 12px !important;
+
+}
+
+.row-table-list .table-list-title {
+    padding: 15px;
+}
+
+.row-table-list .table-list-content {
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+}
+
+.table-list-title .label-control {
+    text-align: left;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+}
+
+.table-list-title .form-group, .label-control, .span-control {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.table-list-title .span-control {
+    font-weight: 100 !important;
+    text-align: left;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+}

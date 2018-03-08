@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="middle-box text-center animated fadeInDown">
+    <h1 style="font-size: 140px;font-weight: bold;color: #28B779;">403</h1>
+    <h3> 抱歉，页面好像去火星啦！</h3>
+    <form class="form-inline m-t" style="margin-top: 20px">
+        <a href="javascript:;" class="btn btn-primary error-index" style="margin: 2px">
+            <span class="glyphicon glyphicon-home"></span>
+            首页
+        </a>
+        <a onclick="history.go(-1)" class="btn btn-warning" style="margin: 2px">
+            <span class="glyphicon glyphicon-repeat"></span>
+            返回
+        </a>
+    </form>
+</div>
+<!--Footer-part-->
+<div class="middle-box text-center animated fadeInDown" style="margin-top: 50px">
+    <div id="footer" class="span12">
+        Copyright © 2016, 暖游（上海）国际旅行社有限公司  All rights reserved 沪ICP备15007941号-1 
+    </div>
+</div>
+<!--end-Footer-part-->
+<script type="text/javascript" th:src="@{/js/jquery/1.12.4/jquery-1.12.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.loadmask.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jqPaginator.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.tmpl.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/plugin/select2/select2.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery.datetimepicker.full.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/plugin/xcConfirm.js}"></script>
+<script type="text/javascript" th:src="@{/js/common/common.js}"></script>
+</body>
+</html>

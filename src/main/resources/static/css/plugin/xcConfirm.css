@@ -1,0 +1,139 @@
+/*垂直居中*/
+.verticalAlign {
+	vertical-align: middle;
+	display: inline-block;
+	height: 100%;
+	margin-left: -1px;
+}
+
+.xcConfirm .xc_layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.3;
+
+	z-index: 100000000;
+}
+
+.xcConfirm .popBox {
+	position: fixed;
+	left: 50%;
+	top: 35%;
+	background-color: #ffffff;
+	width: 500px;
+	margin-left: -250px;
+	margin-top: -100px;
+	border-radius: 0px;
+	box-shadow: 0 0 80px 0 rgba(0,0,0,.3);
+
+	z-index: 100000001;
+}
+
+.xcConfirm .popBox .ttBox {
+	height: 40px;
+	line-height: 18px;
+	padding: 12px 15px;
+	border-bottom: solid 1px #f4f4f4;
+	filter: alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=100) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fff,endcolorstr=#f4f4f4,gradientType=0);
+    -ms-filter: alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=100) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fff,endcolorstr=#f4f4f4,gradientType=0);
+    background: #fff;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1), rgba(244, 244, 244, 1));
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(rgba(244, 244, 244, 1)));
+}
+
+.xcConfirm .popBox .ttBox .tt {
+	font-size: 16px;
+	display: block;
+	float: left;
+	height: 30px;
+	position: relative;
+}
+
+.xcConfirm .popBox .ttBox .clsBtn {
+	display: block;
+	cursor: pointer;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	background: url(../../img/icons-tips.png) -48px -96px no-repeat;
+}
+
+.xcConfirm .popBox .txtBox {
+	margin: 15px 30px;
+	/* 	height: 60px; */
+	overflow: hidden;
+}
+
+.xcConfirm .popBox .txtBox .bigIcon {
+	float: left;
+	margin-right: 20px;
+	width: 48px;
+	height: 48px;
+	background-image: url(../../img/icons-tips.png);
+	background-repeat: no-repeat;
+	background-position: 48px 0;
+}
+
+.xcConfirm .popBox .txtBox>p {
+	line-height: 26px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size: 16px;
+	max-height: 300px;
+}
+
+.xcConfirm .popBox .txtBox>p input {
+	/* width: 364px; */
+	height: 30px;
+	border: solid 1px #1abb9c;
+	font-size: 18px;
+	margin-top: 6px;
+}
+
+.xcConfirm .popBox .btnArea {
+	border-top: solid 1px #f4f4f4;
+}
+
+.xcConfirm .popBox .btnGroup {
+	float: right;
+}
+
+.xcConfirm .popBox .btnGroup .sgBtn {
+	margin-top: 12px;
+	margin-right: 10px;
+	margin-bottom: 12px;
+}
+
+.xcConfirm .popBox .sgBtn {
+	display: block;
+	cursor: pointer;
+	float: left;
+	width: 86px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #3778e1;
+	border-radius: 4px;
+}
+
+.xcConfirm .popBox .sgBtn.ok {
+	color: #FFFFFF;
+}
+
+.xcConfirm .popBox .sgBtn.cancel {
+	background: none;
+	color: #5f748b;
+	border: #c0c9d2 1px solid;
+}
+
+.xcConfirm .popBox .sgBtn.copy {
+	border: #c0c9d2 1px solid;
+}
+
+
